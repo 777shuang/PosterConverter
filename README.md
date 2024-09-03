@@ -1,0 +1,2 @@
+# PosterConverter
+ポスターのPDFから印刷用のPDFを生成する
