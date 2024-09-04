@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pypdf2 = "*"
 tkeasygui = "*"
+pypdf = "*"
 
 [dev-packages]
 nuitka = "*"
