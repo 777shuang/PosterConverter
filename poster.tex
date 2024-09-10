@@ -1,0 +1,20 @@
+\documentclass[landscape]{jlreq}
+\usepackage{luacode}
+\usepackage{graphicx}
+\usepackage[absolute,showboxes]{textpos}
+
+\newcommand{\includepdf}[2]{\begin{textblock*}{0.95\pagewidth}(0pt,0pt)
+    \noindent\includegraphics[page=#1,width=\columnwidth]{#2}
+\end{textblock*}}
+
+\begin{document}
+\pagestyle{empty}
+\begin{luacode*}
+local path = 'output.pdf'
+local pages = pdfe.getnofpages(pdfe.open(path))
+for i = 1, pages do
+    tex.print('\\includepdf{' .. i .. '}{' .. path .. '}')
+    tex.print('\\null\\clearpage')
+end
+\end{luacode*}
+\end{document}
