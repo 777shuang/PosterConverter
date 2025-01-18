@@ -1,10 +1,11 @@
 \documentclass[landscape]{jlreq}
 \usepackage{luacode}
 \usepackage{graphicx}
-\usepackage[absolute,showboxes]{textpos}
+\usepackage[absolute]{textpos}
 
-\newcommand{\includepdf}[2]{\begin{textblock*}{0.95\pagewidth}(0pt,0pt)
-    \noindent\includegraphics[page=#1,width=\columnwidth]{#2}
+\fboxsep=0pt
+\newcommand{\includepdf}[2]{\begin{textblock*}{0.93\pagewidth}(1pt,1pt)
+    \noindent\fbox{\includegraphics[page=#1,width=\columnwidth]{#2}}
 \end{textblock*}}
 
 \begin{document}
