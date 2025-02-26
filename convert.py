@@ -29,7 +29,7 @@ def convert(input: str, output: str, hsplit: int):
 
     os.chdir(os.path.dirname(__file__))
     writer.write('output.pdf')
-    subprocess.run('latexmk -lualatex poster.tex')
+    subprocess.run(['latexmk', '-lualatex', os.path.join(os.path.dirname(__file__), 'poster.tex')])
     shutil.move('poster.pdf', output)
 
 if __name__ == '__main__':
