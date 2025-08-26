@@ -2,6 +2,7 @@
 \usepackage{luacode}
 \usepackage{graphicx}
 \usepackage[absolute]{textpos}
+\usepackage[margin=20truemm]{geometry}
 
 \fboxsep=0pt
 \newcommand{\includepdf}[2]{\begin{textblock*}{0.93\pagewidth}(1pt,1pt)
@@ -9,7 +10,6 @@
 \end{textblock*}}
 
 \begin{document}
-\pagestyle{empty}
 \begin{luacode*}
 local path = 'output.pdf'
 local pages = pdfe.getnofpages(pdfe.open(path))

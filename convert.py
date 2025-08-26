@@ -9,8 +9,8 @@ def convert(input: str, output: str, hsplit: int):
     reader = pdf.PdfReader(input)
     writer = pdf.PdfWriter()
 
-    width = reader.pages[0].mediabox.right
-    height = reader.pages[0].mediabox.height
+    width: int = reader.pages[0].mediabox.right
+    height: int = reader.pages[0].mediabox.height
 
     ROOT2 = sqrt(2)
 
